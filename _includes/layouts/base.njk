@@ -11,18 +11,20 @@
     <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
   </head>
   <body class="max-w-5xl mx-auto">
-    <header>
-      <div class="py-4 bg-blue-300 text-center">
-        <h1 class="text-2xl"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
+    <header class="flex flex-wrap justify-between pt-6">
+      <div>
+        <h1 class="text-xl font-bold"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
       </div>
 
       {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-      <ul class="nav">
+      <ul class="flex flex-wrap">
       {%- for entry in collections.all | eleventyNavigation %}
         <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
       {%- endfor %}
       </ul>
     </header>
+
+    <hr>
 
     <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
       {{ content | safe }}
