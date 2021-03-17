@@ -21,7 +21,7 @@
       {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
       <ul class="flex flex-wrap">
         {%- for entry in collections.all | eleventyNavigation %}
-          <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}">
+          <li class="bg-red-200 {% if entry.url == page.url %} bg-blue-200 {% endif %} mx-2">
             <a href="{{ entry.url | url }}" class="p-2">{{ entry.title }}</a>
           </li>
         {%- endfor %}
