@@ -4,6 +4,9 @@
   "description": "Personal website and blog for James Vanderburg.",
   "author": {
     "name": "James Vanderburg",
-    "email": "james@vanderburg.org"
+    "email": "james@vanderburg.org",
+    "github": "jameslvdb",
+    "twitter": "jameslvdb",
+    "linkedin": "james-vanderburg"
   }
 }
