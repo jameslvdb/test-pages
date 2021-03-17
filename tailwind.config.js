@@ -1,10 +1,24 @@
 const colors = require('tailwindcss/colors')
 
+const disabledCss = {
+  "code::before": false,
+  "code::after": false,
+}
+
 module.exports = {
   purge: [],
   presets: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    extend: {
+      typography: {
+        DEFAULT: { css: disabledCss },
+        sm: { css: disabledCss },
+        lg: { css: disabledCss },
+        xl: { css: disabledCss },
+        '2xl': { css: disabledCss },
+      }
+    },
     screens: {
       sm: '640px',
       md: '768px',

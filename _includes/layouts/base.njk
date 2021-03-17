@@ -30,7 +30,7 @@
 
     <br>
 
-    <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
+    <main class="max-w-3xl mx-auto justify-items-center {% if templateClass %} {{ templateClass }}{% endif %}">
       {{ content | safe }}
     </main>
 
