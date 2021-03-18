@@ -1,9 +1,9 @@
 <hr>
 <footer class="flex-shrink-0">
   <div class="max-w-3xl mx-auto py-4">
-    <ul class="flex flex-wrap justify-between">
+    <ul class="flex flex-wrap flex-col sm:flex-row justify-between">
       {% if metadata.author.github %}
-        <li>
+        <li class="text-center">
           <a class="inline-block" href="https://github.com/{{ metadata.author.github }}">
             <span>
               <svg class="inline-block" width="1em" height="1em">
@@ -16,7 +16,7 @@
       {% endif %}
 
       {% if metadata.author.twitter %}
-        <li>
+        <li class="text-center">
           <a class="inline-block" href="https://twitter.com/{{ metadata.author.twitter }}">
             <span>
               <svg class="inline-block" width="1em" height="1em">
@@ -31,7 +31,7 @@
       {% endif %}
 
       {% if metadata.author.linkedin %}
-        <li>
+        <li class="text-center">
           <a class="inline-block" href="https://www.linkedin.com/in/{{ metadata.author.linkedin }}">
             <span>
               <svg class="inline-block" viewBox="0 50 512 512" width="1em" height="1em">
@@ -48,7 +48,7 @@
         </li>
       {% endif %}
 
-      <li>
+      <li class="text-center">
         <a href="mailto:james@vanderburg.org" class="inline-block">
           <span>
             <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#828282" width="1em" height="1em">
