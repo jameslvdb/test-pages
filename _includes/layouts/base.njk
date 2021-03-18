@@ -10,27 +10,29 @@
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
     <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
   </head>
-  <body class="max-w-5xl mx-auto min-h-full flex flex-col">
-    <header class="flex flex-wrap flex-shrink-0 justify-between pt-6">
-      <div>
-        <h1 class="text-xl font-bold">
-          <a href="{{ '/' | url }}">{{ metadata.title }}</a>
-        </h1>
-      </div>
+  <body class="mx-auto min-h-full flex flex-col">
+    <header class="flex-shrink-0 bg-blue-500 shadow-lg">
+      <div class="max-w-5xl mx-auto flex flex-wrap justify-between py-6">
+        <div>
+          <h1 class="text-xl font-bold">
+            <a href="{{ '/' | url }}">{{ metadata.title }}</a>
+          </h1>
+        </div>
 
-      {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-      <ul class="flex flex-wrap">
-        {%- for entry in collections.all | eleventyNavigation %}
-          <li class="{% if entry.url == page.url %} border-b-2 border-blue-600 {% endif %} mx-2">
-            <a href="{{ entry.url | url }}" class="p-2">{{ entry.title }}</a>
-          </li>
-        {%- endfor %}
-      </ul>
+        {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
+        <ul class="flex flex-wrap">
+          {%- for entry in collections.all | eleventyNavigation %}
+            <li class="{% if entry.url == page.url %} border-b-2 border-white {% endif %} mx-2">
+              <a href="{{ entry.url | url }}" class="p-2">{{ entry.title }}</a>
+            </li>
+          {%- endfor %}
+        </ul>
+      </div>
     </header>
 
     <br>
 
-    <main class="w-3/4 flex-grow self-center">
+    <main class="w-3/4 flex-grow self-center pt-8">
       {{ content | safe }}
     </main>
 
