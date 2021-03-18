@@ -2,6 +2,19 @@
 <footer class="flex-shrink-0">
   <div class="max-w-3xl mx-auto py-4">
     <ul class="flex flex-wrap flex-col sm:flex-row justify-between">
+
+      <li class="text-center">
+        <a href="mailto:james@vanderburg.org" class="inline-block">
+          <span>
+            <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#828282" width="1em" height="1em">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+          </span>
+
+          <span class="text-blue-600 hover:underline">james@vanderburg.org</span>
+        </a>
+      </li>
+
       {% if metadata.author.github %}
         <li class="text-center">
           <a class="inline-block" href="https://github.com/{{ metadata.author.github }}">
@@ -47,18 +60,6 @@
           </a>
         </li>
       {% endif %}
-
-      <li class="text-center">
-        <a href="mailto:james@vanderburg.org" class="inline-block">
-          <span>
-            <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#828282" width="1em" height="1em">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-            </svg>
-          </span>
-
-          <span class="text-blue-600 hover:underline">james@vanderburg.org</span>
-        </a>
-      </li>
     </ul>
   </div>
 </footer>
