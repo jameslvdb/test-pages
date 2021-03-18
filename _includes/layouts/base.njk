@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="h-full">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,8 +10,8 @@
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
     <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
   </head>
-  <body class="max-w-5xl mx-auto">
-    <header class="flex flex-wrap justify-between pt-6">
+  <body class="max-w-5xl mx-auto min-h-full flex flex-col">
+    <header class="flex flex-wrap flex-shrink-0 justify-between pt-6">
       <div>
         <h1 class="text-xl font-bold">
           <a href="{{ '/' | url }}">{{ metadata.title }}</a>
@@ -30,12 +30,11 @@
 
     <br>
 
-    <main class="max-w-3xl mx-auto justify-items-center {% if templateClass %} {{ templateClass }}{% endif %}">
+    <main class="max-w-3xl mx-auto flex-grow justify-items-center {% if templateClass %} {{ templateClass }}{% endif %}">
       {{ content | safe }}
     </main>
 
     {% include "footer.njk" %}
-
 
     <!-- Current page: {{ page.url | url }} -->
   </body>
