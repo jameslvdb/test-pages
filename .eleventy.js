@@ -113,7 +113,7 @@ module.exports = function (eleventyConfig) {
     // Best paired with the `url` filter: https://www.11ty.dev/docs/filters/url/
 
     // You can also pass this in on the command line using `--pathprefix`
-    // pathPrefix: "/",
+    pathPrefix: "/test-pages/",
 
     markdownTemplateEngine: "liquid",
     htmlTemplateEngine: "njk",
