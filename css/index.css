@@ -1,3 +1,10 @@
 @tailwind base;
+
+@layer base {
+  button:focus {
+    outline: 0px;
+  }
+}
+
 @tailwind components;
 @tailwind utilities;
